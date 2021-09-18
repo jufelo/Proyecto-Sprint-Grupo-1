@@ -1,0 +1,79 @@
+body{
+	background-image: url("Invierno.jpg");
+	/*la imagen se ajusta al 100% en ancho y alto
+	 * de la pantalla actual*/
+	background-size: 100vw 100vh;
+	/*La imagen se quede fiaja*/
+	background-attachment: fixed;
+	/*ocupe hasta los extremos minimos de la pantalla actual*/
+	margin: 0;
+	position: absolute;
+	left: 30%;
+	top:10%
+}
+#form-registro{
+	border: 1px solid black;
+	width: 100%;
+	margin: auto;
+	background: rgba(255, 255,255, 0.6);
+	padding: 10px 20px;
+	box-sizing: border-box;
+	margin-top: 20px;
+	border-radius: 10px 10px;
+}
+#label{
+	display: block;
+	padding:5px;
+	font-size: 15px;
+}
+#input{
+	background-color:rgba(200,200,200,0.5);
+	width: 100%;
+	margin-bottom: 8px;
+	padding: 7px;
+	box-sizing: border-box;
+	font-size: 15px;
+	border-radius: 7px;
+}
+h1, h2{
+	background-color:#0f0;
+	text-align: center;
+	margin: 0px;
+	font-size:40px;
+	border-radius: 10px 10px 5px 5px;;
+	margin-bottom:20px;
+}
+#btn-submit-form:hover{
+	background-color: #080;
+	cursor: pointer;
+}
+#btn-registrar, #btn-submit-form {
+	background-color:#0f0;
+	padding: 5px;
+	left: 70%;
+	border-radius: 8px;
+	position: relative;
+	font-size:15px;
+	
+}
+
+@media (max-width: 800px){
+	form{
+		width: 100%;
+		height: 100%;
+	}
+}
+
+@media (max-width: 600px){
+	form{
+		width: 100%;
+		height: 100%;
+	}
+}
+
+@media (max-width: 480px){
+	form{
+		width: 100%;
+		height: 100%;
+	}
+}
