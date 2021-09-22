@@ -3,7 +3,7 @@ body{
 	/*la imagen se ajusta al 100% en ancho y alto
 	 * de la pantalla actual*/
 	background-size: 100vw 100vh;
-	/*La imagen se quede fiaja*/
+	/*La imagen se quede fija*/
 	background-attachment: fixed;
 	/*ocupe hasta los extremos minimos de la pantalla actual*/
 	margin: 0;
@@ -26,7 +26,7 @@ body{
 	padding:5px;
 	font-size: 15px;
 }
-#input{
+#Nombre, #Apellido, #Telefono, #Correo, #Contrasena {
 	background-color:rgba(200,200,200,0.5);
 	width: 100%;
 	margin-bottom: 8px;
@@ -47,14 +47,14 @@ h1, h2{
 	background-color: #0c0;
 	cursor: pointer;
 }
-#btn-registrar, #btn-submit-form {
+#btn-submit-form, #btn-registrar {
 	background-color:#0f0;
 	padding: 5px;
 	left: 70%;
 	border-radius: 8px;
 	position: relative;
 	font-size:15px;
-	
+
 }
 
 @media (max-width: 800px){
