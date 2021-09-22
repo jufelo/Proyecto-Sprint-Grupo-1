@@ -1,5 +1,5 @@
 body{
-	background-image: "imgs/Invierno.jpg";
+	background-image: url(Invierno.jpg);
 	/*la imagen se ajusta al 100% en ancho y alto
 	 * de la pantalla actual*/
 	background-size: 100vw 100vh;
