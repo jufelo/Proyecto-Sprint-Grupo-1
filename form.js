@@ -1,19 +1,19 @@
-function Nombre(valor) {
+function checkNombre(valor) {
     
 }
 
-function Apellido(valor) {
+function checkApellido(valor) {
 
 }
 
-function Telefono(valor) {
+function checkTelefono(valor) {
 
 }
 
-function Correo(valor) {
+function checkCorreo(valor) {
 
 }
 
-function Contrasena(valor) {
+function checkContrasena(valor) {
 
 }
