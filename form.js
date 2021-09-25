@@ -3,6 +3,7 @@ export default checkApellido;
 export default checkTelefono;
 export default checkCorreo;
 export default checkContrasena;
+document.querySelector("#btn-submit-form").addEventListener('click',click_boton);
 
 function click_boton()
 {
@@ -23,6 +24,7 @@ function checkNombre(valor) {
             {
                 if(array_campo[i] == "0" || array_campo[i] == "1" || array_campo[i] == "2" || array_campo[i] == "3" || array_campo[i] == "4" || array_campo[i] == "5" || array_campo[i] == "6" || array_campo[i] == "7" || array_campo[i] == "8" || array_campo[i] == "9"){  
                     verificacion = false;
+                    alert("El campo no admite numeros");
                     i = array_campo.length;
                                     
                 }
@@ -31,12 +33,14 @@ function checkNombre(valor) {
         else
         {
             verificacion = false;
+            alert("El campo no admite numeros");
             
         }       
     }
     else
     {
         verificacion = false;   
+        alert("El campo no admite numeros");
         
     }
     return verificacion;
