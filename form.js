@@ -1,120 +1,156 @@
-export default checkNombre;
-export default checkApellido;
-export default checkTelefono;
-export default checkCorreo;
-export default checkContrasena;
-document.querySelector("#btn-submit-form").addEventListener('click',click_boton);
 
-function click_boton()
-{
-    let name = document.getElementById("nombre").value;
-    let apellido = document.getElementById("apellido").value;
-    let telefono = document.getElementById("telefono").value;
-    checkNombre(nombre);
-    checkApellido(apellido);
-    checkTelefono(telefono, "telefono");
-
-}
-function checkNombre(valor) {
-    let verificacion = validar_texto(valor);let array_campo = Array.from(valor);
-    let verificacion = true;
-    if (campo != "") {
+function checkNombre() {
+    valor = document.getElementById("nombre").value;
+    let array_campo = Array.from(valor);
+    if (valor != "") {
         if (array_campo.length <= 30 && array_campo.length >= 4) {
             for(let i=0; i<array_campo.length; i++)
             {
                 if(array_campo[i] == "0" || array_campo[i] == "1" || array_campo[i] == "2" || array_campo[i] == "3" || array_campo[i] == "4" || array_campo[i] == "5" || array_campo[i] == "6" || array_campo[i] == "7" || array_campo[i] == "8" || array_campo[i] == "9"){  
-                    verificacion = false;
                     alert("El campo no admite numeros");
                     i = array_campo.length;
+                    return false;
+                    
                                     
                 }
             }
         }
         else
         {
-            verificacion = false;
             alert("El campo no admite numeros");
+            return false;
             
-        }       
+            
+        }
+        return true;       
     }
     else
     {
-        verificacion = false;   
+          
         alert("El campo no admite numeros");
+        return false;
         
     }
-    return verificacion;
     
-    
-         
 }
 
-function checkApellido(valor) {
+module.exports = checkNombre;
+
+
+function checkApellido() {
+    valor = document.getElementById("apellido").value;
     let array_campo = Array.from(valor);
-    let verificacion = true;
-    if (campo != "") {
+    if (valor != "") {
         if (array_campo.length <= 30 && array_campo.length >= 4) {
             for(let i=0; i<array_campo.length; i++)
             {
                 if(array_campo[i] == "0" || array_campo[i] == "1" || array_campo[i] == "2" || array_campo[i] == "3" || array_campo[i] == "4" || array_campo[i] == "5" || array_campo[i] == "6" || array_campo[i] == "7" || array_campo[i] == "8" || array_campo[i] == "9"){  
-                    verificacion = false;
-                    i = array_campo.length;                  
+                    alert("El campo no admite numeros");
+                    i = array_campo.length;
+                    return false;
+                    
+                                    
                 }
             }
         }
         else
         {
-            verificacion = false;
-        }       
+            alert("El campo no admite numeros");
+            return false;
+            
+            
+        }
+        return true;       
     }
     else
     {
-        verificacion = false;       
+          
+        alert("El campo no admite numeros");
+        return false;
+        
     }
-    return verificacion;
-
 }
+module.exports = checkApellido;
 
-function checkTelefono(valor) {
+
+function checkTelefono() {
+    valor = document.getElementById("telefono").value;
     let array_campo = Array.from(valor);
-    let verificacion = true;
-    if(campo != ""){
+    if(valor != ""){
         if(array_campo.length == 7){
             for(let i=0; i<array_campo.length; i++)
             {                
                 if(array_campo[i] == "0" || array_campo[i] == "1" || array_campo[i] == "2" || array_campo[i] == "3" || array_campo[i] == "4" || array_campo[i] == "5" || array_campo[i] == "6" || array_campo[i] == "7" || array_campo[i] == "8" || array_campo[i] == "9"){ 
-                                                        
+                     return true;                                   
                 }
                 else
                 {
-                    verificacion = false;
+                    return false;
                     i = array_campo.length;  
                 }
             }
         }
         else
         {
-            verificacion = false;
+            return false;
         }
 
     }
     else
     {
-        verificacion = false;
+        return false;
     }
-    return verificacion;
-
+    
 }
+module.exports = checkTelefono;
 
-function checkCorreo(valor) {
+function checkCorreo() {
+    valor = document.getElementById("correo").value;
+    if (valor != null) {
+        expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if ( expr.test(valor) ){
+            return true;
+        }else{
+            return false;
+        }
+              
+        
+    
+    }else{
+        return false;
 
+    }
 }
+module.exports = checkCorreo;
 
-function checkContrasena(valor) {
+function checkContrasena() {
+valor = document.getElementById("contrasena").value;
+    const r = /[A-Z]/;
+    const m = /[a-z]/;
+    const n = /[0-9]/;
+    if(valor =! null) {
+        
+    if(array_campo.length >=8){
+        for(let i=0; i<array_campo.length; i++)
+            {                
+                if(r.test(valor)){ 
+                    if(m.test(valor)){
+                        if(n.test(valor)){
+                            return true;
+                        }
+                    }
+                     return false;                                   
+                }
+                else
+                {
+                    return false;
+                    i = array_campo.length;  
+                }
+            }
 
-
+    }else{
+        return false;
+    }
 }
-
-
-
-
+}
+module.exports = {checkNombre, checkApellido, checkTelefono, checkCorreo, checkContrasena};
