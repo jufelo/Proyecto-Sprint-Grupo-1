@@ -1,3 +1,18 @@
+//Declaramos las variables
+var nombre, apellido, telefono, correo, contraseña;
+
+//Asignamos las variables cuando toda la pagina esté cargada
+window.onload = function() {
+
+    //Asignamos a las variables, los input
+    //nombreInput = document.getElementById("nombre");
+
+    //Agrupamos los eventos
+    
+}
+
+
+
 function checkNombre() {
     valor = document.getElementById("nombre").value;
     let array_campo = Array.from(valor);
