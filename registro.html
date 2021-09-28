@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 	<link rel="stylesheet" href="estilos.css">
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Registro</title>
 </head>
-
 <body>
-	<form id="form-registro" action="">
+	<form action="" method="" id="form-registro">
 		<h2>Registro</h2>
-		<label id="label">Nombre </label> <input id="input" type="text">
-		<label id="label">Apellido </label> <input id="input" type="text">
-		<label id="label">Telefono </label> <input id="input" type="tel">
-		<label id="label">Correo </label> <input id="input" type="email">
-		<label id="label">Contraseña </label> <input id="input" type="password">
-		<button id="btn-submit-form" type="submit">Registrar</button>
+		<label for="nombre">Nombre</label>
+		<input type="text" name= "nombre" id="nombre" placeholder="Grupo">
+		<label for="apellido">Apellido</label>
+		<input type="text" name="apellido" id="apellido" placeholder="Uno">
+		<label for="telefono">Teléfono</label>
+		<input type="text" id="telefono" placeholder="1234567">
+		<label for="correo">Correo</label>
+		<input type="text" id="correo" placeholder="correo@correo.com">
+		<label for="contrasena">Contraseña</label>
+		<input type="text" id="contrasena">
+		<input type="submit" name="submit" value="Registrar" id="btn-submit-form">
 	</form>
+	<p id="msg"></p>
+	<script src="form.js"></script>
 </body>
 </html>
