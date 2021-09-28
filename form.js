@@ -50,6 +50,7 @@ function checkNombre(valor) {
     
 }
 
+
 module.exports = checkNombre;
 
 
