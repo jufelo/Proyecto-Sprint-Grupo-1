@@ -11,16 +11,30 @@ function agregarRegistro() {
 
     // Opcional Sprint 3. objeto console para imprimir el contenido que se está ingresando en el arreglo.
     console.table(registro);
-    return arreglo;
 }
 
 function  ordenarArreglo(){
 
+    arreglo.sort(function (a, b) {
+        if (a.apellido > b.apellido) {
+          return 1;
+        }
+      if (a.apellido < b.apellido) {
+          return -1;
+      }
+        return 0;
+      });
+      console.table(arreglo);
 }
 
 function filtrarCorreo(){
-
+    
+    filtro = arreglo.filter(function (email) {
+        return email.correo.endsWith('gmail.com');
+      });
+      console.log(filtro);
 }
+
 /*
 module.exports = agregarRegistro;
 module.exports = ordenarArreglo;
