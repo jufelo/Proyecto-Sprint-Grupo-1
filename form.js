@@ -1,15 +1,15 @@
 //Declaramos las variables
-var nombre, apellido, telefono, correo, contraseña;
+//var nombre, apellido, telefono, correo, contraseña;
 
 //Asignamos las variables cuando toda la pagina esté cargada
-window.onload = function() {
+//window.onload = function() {
 
     //Asignamos a las variables, los input
     //nombreInput = document.getElementById("nombre");
 
     //Agrupamos los eventos
     
-}
+//}
 
 
 
@@ -44,7 +44,7 @@ function checkNombre() {
 
 }
 
-module.exports = checkNombre;
+//module.exports = checkNombre;
 
 
 function checkApellido() {
@@ -80,7 +80,7 @@ function checkApellido() {
 
     }
 }
-module.exports = checkApellido;
+//module.exports = checkApellido;
 
 
 function checkTelefono() {
@@ -112,9 +112,10 @@ function checkTelefono() {
     }
 
 }
-module.exports = checkTelefono;
+//module.exports = checkTelefono;
 
 function checkCorreo() {
+    
     valor = document.getElementById("correo").value;
     if (valor != null) {
         expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
@@ -128,10 +129,11 @@ function checkCorreo() {
 
     }
 }
-module.exports = checkCorreo;
+//module.exports = checkCorreo;
 
 function checkContrasena() {
-valor = document.getElementById("contrasena").value;
+
+    valor = document.getElementById("contrasena").value;
     const r = /[A-Z]/;
     const m = /[a-z]/;
     const n = /[0-9]/;
