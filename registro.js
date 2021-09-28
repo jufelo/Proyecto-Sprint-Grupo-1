@@ -10,7 +10,7 @@ function agregarRegistro() {
     arreglo.push (registro);
 
     // Opcional Sprint 3. objeto console para imprimir el contenido que se está ingresando en el arreglo.
-    console.table();
+    console.table(registro);
     return arreglo;
 }
 
